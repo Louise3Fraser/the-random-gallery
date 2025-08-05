@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Marist";
+  src: url("./fonts/ABCMaristVariable-Trial.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Marist";
+  src: url("./fonts/ABCMaristVariableItalic-Trial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+body,
+h1,
+h2,
+p {
+  font-family: "Marist", serif;
+  margin: 0;
+  background-color: #0f0f0f;
+  color: #eee;
+  font-size: 13.5px;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+em {
+  font-style: italic;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background-color: #333;
+  margin: 1.5rem 0;
+  margin-left: -22px;
+  margin-right: -22px;
+}
+
+.top-nav {
+  padding: 18px 22px 0 22px;
+  font-weight: 500;
+}
+
+.top-line {
+  height: 1px;
+  background-color: #333;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+}
+
+.separator {
+  height: 18px;
+}
+
+.separator-lg {
+  height: 22px;
+}
+
+.flex-apart {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  width: 29%;
+  padding: 18px 22px;
+  border-right: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.gallery {
+  width: 71%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: flex-start;
+  padding: 18px;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.main-image {
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.thumbnail:hover img {
+ transform: rotate(-5deg) scale(1.01);
+}
+.thumbnail img {
+  width: 100%;
+  height: auto;
+   transition: transform 0.3s ease;
+}
+
+.item-container {
+  padding: 10px;
+}
+
+.item-container-lg {
+  padding: 20px;
+}
+
+.thumbnail span {
+  font-style: italic;
+}
+
+.footer {
+  padding: 1rem 22px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-title {
+  cursor: pointer;
+  user-select: none;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.09; 
+  z-index: 1000;   
+  pointer-events: none; 
+}

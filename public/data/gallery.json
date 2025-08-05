@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Roman dodecahedron",
+    "image": "/images/1-roman.png",
+    "discovery": "1739, France",
+    "description": [
+      "Each face has a circular hole of varying diameter in the middle, the holes connecting to the hollow center, and each corner has a protruding knob.",
+      "Since the first known example was discovered in 1739, over one hundred such objects have been discovered, dating from the 2nd to 4th centuries AD. Their purpose or meaning has been long debated but remains unknown."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Green Butterfly",
+    "image": "/images/2-mineral.png",
+    "discovery": "Unknown",
+    "description": [
+      "A vivid specimen with iridescent wings and perfect symmetry.",
+      "Butterflies often represent transformation or freedom in visual culture."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "butterfly",
+    "image": "/images/3-butterfly.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 4,
+    "title": "butterfly",
+    "image": "/images/4-pinkplanet.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 5,
+    "title": "butterfly",
+    "image": "/images/5-egg.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 6,
+    "title": "butterfly",
+    "image": "/images/6-goat.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 7,
+    "title": "butterfly",
+    "image": "/images/7-formation.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 8,
+    "title": "Roman dodecahedron",
+    "image": "/images/8-rose.png",
+    "discovery": "1739, France",
+    "description": [
+      "Each face has a circular hole of varying diameter in the middle, the holes connecting to the hollow center, and each corner has a protruding knob.",
+      "Since the first known example was discovered in 1739, over one hundred such objects have been discovered, dating from the 2nd to 4th centuries AD. Their purpose or meaning has been long debated but remains unknown."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Green Butterfly",
+    "image": "/images/9-origami.png",
+    "discovery": "Unknown",
+    "description": [
+      "A vivid specimen with iridescent wings and perfect symmetry.",
+      "Butterflies often represent transformation or freedom in visual culture."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "butterfly",
+    "image": "/images/10-jellycat.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 11,
+    "title": "butterfly",
+    "image": "/images/11-clover.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 12,
+    "title": "butterfly",
+    "image": "/images/3-butterfly.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 13,
+    "title": "butterfly",
+    "image": "/images/3-butterfly.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+    {
+    "id": 14,
+    "title": "butterfly",
+    "image": "/images/3-butterfly.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  }
+]
