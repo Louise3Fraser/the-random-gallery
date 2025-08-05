@@ -17,7 +17,7 @@ export default function Gallery({ setSelectedItem }) {
           className="thumbnail"
           onClick={() => setSelectedItem(item)}
         >
-          <span className="id-number">[{item.id}]</span>
+          <p className="id-number">[{item.id}]</p>
           <div className="item-container">
             <img src={item.image} alt={item.title} />
           </div>

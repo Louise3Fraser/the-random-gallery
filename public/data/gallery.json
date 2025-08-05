@@ -5,8 +5,9 @@
     "image": "/images/1-roman.png",
     "discovery": "1739, France",
     "description": [
-      "Each face has a circular hole of varying diameter in the middle, the holes connecting to the hollow center, and each corner has a protruding knob.",
-      "Since the first known example was discovered in 1739, over one hundred such objects have been discovered, dating from the 2nd to 4th centuries AD. Their purpose or meaning has been long debated but remains unknown."
+      "A Roman docecahedron is a famously mysterious ancient artifact. As the name suggests, it has 12 sides, each with a hole connecting to a hollow center, and every corner features a protruding knob.",
+      "The first known example was discovered in 1739, but since then, over one hundred other ones have been found.",
+      "But what were they used for? This question has long sparked debate. Theories range from mathematical instruments and religious artifacts to candlestick holders, tent-building tools, or even knitting devices."
     ]
   },
   {
@@ -29,7 +30,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 4,
     "title": "butterfly",
     "image": "/images/4-pinkplanet.png",
@@ -39,7 +40,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 5,
     "title": "butterfly",
     "image": "/images/5-egg.png",
@@ -49,7 +50,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 6,
     "title": "butterfly",
     "image": "/images/6-goat.png",
@@ -59,7 +60,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 7,
     "title": "butterfly",
     "image": "/images/7-formation.png",
@@ -69,7 +70,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 8,
     "title": "Roman dodecahedron",
     "image": "/images/8-rose.png",
@@ -99,7 +100,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 11,
     "title": "butterfly",
     "image": "/images/11-clover.png",
@@ -109,30 +110,40 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 12,
     "title": "butterfly",
-    "image": "/images/3-butterfly.png",
+    "image": "/images/12-coin.png",
     "discovery": "Ancient resin, polished",
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 13,
     "title": "butterfly",
-    "image": "/images/3-butterfly.png",
+    "image": "/images/13-chair.png",
     "discovery": "Ancient resin, polished",
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 14,
     "title": "butterfly",
-    "image": "/images/3-butterfly.png",
+    "image": "/images/14-baseball.png",
+    "discovery": "Ancient resin, polished",
+    "description": [
+      "A fiery, rectangular-cut gem known for its organic origin.",
+      "Amber can contain trapped insects and dates back millions of years."
+    ]
+  },
+  {
+    "id": 15,
+    "title": "butterfly",
+    "image": "/images/15-writing.png",
     "discovery": "Ancient resin, polished",
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",

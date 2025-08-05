@@ -82,12 +82,13 @@ em {
 .gallery {
   width: 71%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   align-items: flex-start;
   padding: 18px;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: flex-start;
+  height: 100%;
 }
 
 .main-image {
