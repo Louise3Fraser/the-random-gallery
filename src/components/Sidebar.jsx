@@ -19,7 +19,7 @@ export default function Sidebar({ selectedItem }) {
 
             <div className="sidebar-divider" />
             <div className="flex-apart">
-              <em>Current object count:</em> <p>210</p>
+              <em>Current object count:</em> <p>30</p>
             </div>
             <div className="sidebar-divider" />
             <p>
