@@ -5,7 +5,6 @@ const customStyles = {
     ...base,
     display: "flex",
     backgroundColor: "transparent",
-    width: "100px",
     border: "1px solid #333",
     borderRadius: "999px",
     fontFamily: "Marist, serif",
@@ -64,6 +63,7 @@ const customStyles = {
     margin: "0 2px",
     padding: "0 4px",
     display: "flex",
+    flexDirection: "row",
     alignItems: "center",
     height: "16px",
   }),
@@ -118,7 +118,7 @@ export default function TopNav({
     <div className="top-nav">
       <div className="nav-main">
         <span className="nav-title" onClick={handleClick}>
-          Louise’s digital gallery of random objects
+          The Random Gallery
         </span>
         <div className="filter-group">
           <Select

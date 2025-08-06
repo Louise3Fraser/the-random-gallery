@@ -8,27 +8,38 @@
       "A Roman docecahedron is a famously mysterious ancient artifact. As the name suggests, it has 12 sides, each with a hole connecting to a hollow center, and every corner features a protruding knob.",
       "The first known example was discovered in 1739, but since then, over one hundred other ones have been found.",
       "But what were they used for? This question has long sparked debate. Theories range from mathematical instruments and religious artifacts to candlestick holders, tent-building tools, or even knitting devices."
-    ]
+    ],
+    "category": ["artifact"],
+    "color": ["grey"],
+    "culture": ["ancient"]
   },
+  
   {
     "id": 2,
-    "title": "Green Butterfly",
+    "title": "Kyawthuite",
     "image": "/images/2-mineral.png",
-    "discovery": "Unknown",
+    "discovery": "2010, Myanmar",
     "description": [
-      "A vivid specimen with iridescent wings and perfect symmetry.",
-      "Butterflies often represent transformation or freedom in visual culture."
-    ]
+      "Kyawthuite is the rarest mineral on earth. It is so rare, in fact, that only one specimen has ever been discovered (creds to Dr. Kyaw Thu -- Burmese gemologist).",
+      "The gem is approximately 1.61 carats in size and has a beautiful reddish-orange color. Researchers believe it was formed in pegmatite, which is a type of igneous rock.",
+
+      "Wondering how small the 1.61 carats actually is? It's roughly the weight of 15-20 grains of salt! It's a wonder this gem was found at all. Makes me wonder how many other rare minerals are out there, waiting to be discovered."
+    ],
+    "category": ["natural"],
+    "color": ["orange"],
+    "culture":["modern"]
   },
   {
     "id": 3,
-    "title": "butterfly",
+    "title": "Queen Alexandra's birdwing",
     "image": "/images/3-butterfly.png",
-    "discovery": "Ancient resin, polished",
+    "discovery": "1906, Papua New Guinea",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "This beautiful creature is the world's largest butterfly. It was discovered by collector Albert Stewart Meek on an expedition to collect natural history specimens from New Guinea (unfortunately, he shot it down--it's still available for view in the National History Museum in London.)",
+      "The Queen Alexandra's birdwing can have a wingspan of up to 11 inches (28 cm). Experts question why the butterfly evolved to be this large. Some theories suggest it may offer greater protection from predators, or that it evolved to feed from larger, less competitive flower sources."
+    ],
+        "category": ["natural"],
+    "color": ["multi", "blue"]
   },
   {
     "id": 4,
@@ -38,7 +49,10 @@
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
-    ]
+    ],
+     "category": ["natural"],
+    "color": ["orange"],
+    "culture":["modern"]
   },
   {
     "id": 5,
@@ -48,7 +62,10 @@
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
-    ]
+    ],
+     "category": ["natural"],
+    "color": ["orange"],
+    "culture":["modern"]
   },
   {
     "id": 6,
@@ -58,7 +75,10 @@
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
-    ]
+    ],
+     "category": ["natural"],
+    "color": ["orange"],
+    "culture":["modern"]
   },
   {
     "id": 7,
@@ -68,7 +88,10 @@
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
-    ]
+    ],
+     "category": ["natural"],
+    "color": ["orange"],
+    "culture":["modern"]
   },
   {
     "id": 8,
@@ -78,7 +101,10 @@
     "description": [
       "Each face has a circular hole of varying diameter in the middle, the holes connecting to the hollow center, and each corner has a protruding knob.",
       "Since the first known example was discovered in 1739, over one hundred such objects have been discovered, dating from the 2nd to 4th centuries AD. Their purpose or meaning has been long debated but remains unknown."
-    ]
+    ],
+     "category": ["natural"],
+    "color": ["orange"],
+    "culture":["modern"]
   },
   {
     "id": 9,
@@ -88,7 +114,10 @@
     "description": [
       "A vivid specimen with iridescent wings and perfect symmetry.",
       "Butterflies often represent transformation or freedom in visual culture."
-    ]
+    ],
+     "category": ["natural"],
+    "color": ["orange"],
+    "culture":["modern"]
   },
   {
     "id": 10,
@@ -150,7 +179,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 16,
     "title": "butterfly",
     "image": "/images/16-astrolabe.png",
@@ -200,7 +229,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 21,
     "title": "Roman dodecahedron",
     "image": "/images/21-coca.png",
@@ -221,7 +250,7 @@
       "Butterflies often represent transformation or freedom in visual culture."
     ]
   },
-   {
+  {
     "id": 23,
     "title": "butterfly",
     "image": "/images/23-horse.png",
@@ -231,7 +260,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 24,
     "title": "butterfly",
     "image": "/images/24-scissors.png",
@@ -281,7 +310,7 @@
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
-    {
+  {
     "id": 29,
     "title": "Roman dodecahedron",
     "image": "/images/29-cat.png",

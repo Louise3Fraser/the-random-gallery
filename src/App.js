@@ -19,17 +19,33 @@ function App() {
     category: [
       { value: "artifact", label: "Artifact" },
       { value: "natural", label: "Natural" },
-      // ...
+      { value: "technology", label: "Technology" },
+      { value: "currency", label: "Currency" },
+      { value: "toy", label: "Toy/Game" },
+      { value: "tool", label: "Tool" },
+      { value: "furniture", label: "Furniture" },
+      { value: "jewelry", label: "Jewelry" },
+      { value: "art", label: "Art" },
     ],
     culture: [
-      { value: "greek", label: "Greek" },
-      { value: "japanese", label: "Japanese" },
-      // ...
+      { value: "ancient", label: "Ancient" },
+      { value: "modern", label: "Modern" },
+      { value: "medieval", label: "Medieval" },
+      { value: "american", label: "American" },
+      { value: "asian", label: "Japanese" },
+      { value: "european", label: "European" },
+      { value: "unknown", label: "Unknown" },
     ],
     color: [
       { value: "red", label: "Red" },
       { value: "gold", label: "Gold" },
-      // ...
+      { value: "pink", label: "Pink" },
+      { value: "blue", label: "Blue" },
+      { value: "green", label: "Green" },
+      { value: "yellow", label: "Yellow" },
+      { value: "orange", label: "Orange" },
+      { value: "grey", label: "Grey"},
+      { value: "multi", label: "Multi"}
     ],
   };
   return (
@@ -42,7 +58,7 @@ function App() {
       />
       <div className="main">
         <Sidebar selectedItem={selectedItem} />
-        <Gallery setSelectedItem={setSelectedItem} filters={filters} />{" "}
+        <Gallery setSelectedItem={setSelectedItem} filters={filters} />
       </div>
       <Footer />
       <img
