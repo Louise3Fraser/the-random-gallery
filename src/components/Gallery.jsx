@@ -108,9 +108,7 @@ useEffect(() => {
                   flex: `1 1 calc((100% - ${
                     columnsPerRow - 1
                   } * 2rem) / ${columnsPerRow})`,
-                  maxWidth: `calc((100% - ${
-                    columnsPerRow - 1
-                  } * 2rem) / ${columnsPerRow})`,
+                  maxWidth: "180px",
                 }}
                 onClick={() => setSelectedItem(item)}
               >
