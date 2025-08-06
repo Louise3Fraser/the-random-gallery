@@ -13,7 +13,7 @@
     "color": ["grey"],
     "culture": ["ancient"]
   },
-  
+
   {
     "id": 2,
     "title": "Kyawthuite",
@@ -27,7 +27,7 @@
     ],
     "category": ["natural"],
     "color": ["orange"],
-    "culture":["modern"]
+    "culture": ["modern"]
   },
   {
     "id": 3,
@@ -38,7 +38,7 @@
       "This beautiful creature is the world's largest butterfly. It was discovered by collector Albert Stewart Meek on an expedition to collect natural history specimens from New Guinea (unfortunately, he shot it down--it's still available for view in the National History Museum in London.)",
       "The Queen Alexandra's birdwing can have a wingspan of up to 11 inches (28 cm). Experts question why the butterfly evolved to be this large. Some theories suggest it may offer greater protection from predators, or that it evolved to feed from larger, less competitive flower sources."
     ],
-        "category": ["natural"],
+    "category": ["natural"],
     "color": ["multi", "blue"]
   },
   {
@@ -50,9 +50,9 @@
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
     ],
-     "category": ["natural"],
+    "category": ["natural"],
     "color": ["orange"],
-    "culture":["modern"]
+    "culture": ["modern"]
   },
   {
     "id": 5,
@@ -63,9 +63,9 @@
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
     ],
-     "category": ["natural"],
+    "category": ["natural"],
     "color": ["orange"],
-    "culture":["modern"]
+    "culture": ["modern"]
   },
   {
     "id": 6,
@@ -76,9 +76,9 @@
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
     ],
-     "category": ["natural"],
+    "category": ["natural"],
     "color": ["orange"],
-    "culture":["modern"]
+    "culture": ["modern"]
   },
   {
     "id": 7,
@@ -89,9 +89,9 @@
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
     ],
-     "category": ["natural"],
+    "category": ["natural"],
     "color": ["orange"],
-    "culture":["modern"]
+    "culture": ["modern"]
   },
   {
     "id": 8,
@@ -102,9 +102,9 @@
       "Each face has a circular hole of varying diameter in the middle, the holes connecting to the hollow center, and each corner has a protruding knob.",
       "Since the first known example was discovered in 1739, over one hundred such objects have been discovered, dating from the 2nd to 4th centuries AD. Their purpose or meaning has been long debated but remains unknown."
     ],
-     "category": ["natural"],
+    "category": ["natural"],
     "color": ["orange"],
-    "culture":["modern"]
+    "culture": ["modern"]
   },
   {
     "id": 9,
@@ -115,9 +115,9 @@
       "A vivid specimen with iridescent wings and perfect symmetry.",
       "Butterflies often represent transformation or freedom in visual culture."
     ],
-     "category": ["natural"],
+    "category": ["natural"],
     "color": ["orange"],
-    "culture":["modern"]
+    "culture": ["modern"]
   },
   {
     "id": 10,
@@ -222,13 +222,14 @@
   {
     "id": 20,
     "title": "butterfly",
-    "image": "/images/20-star.png",
+    "image": "/images/20-spoon.png",
     "discovery": "Ancient resin, polished",
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
     ]
   },
+
   {
     "id": 21,
     "title": "Roman dodecahedron",
@@ -303,7 +304,7 @@
   {
     "id": 28,
     "title": "butterfly",
-    "image": "/images/28-spoon.png",
+    "image": "/images/28-star.png",
     "discovery": "Ancient resin, polished",
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",

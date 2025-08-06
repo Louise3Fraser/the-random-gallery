@@ -1,29 +1,40 @@
 import { useEffect, useState } from "react";
 
-export default function Gallery({  setSelectedItem,
+export default function Gallery({
+  setSelectedItem,
   filters,
   currentPage,
   setCurrentPage,
-  setTotalPages, }) {
+  setTotalPages,
+  sidebarCollapsed,
+}) {
   const [items, setItems] = useState([]);
 
-  function getColumnCount(width) {
-    if (width < 500) return 1;
-    if (width < 700) return 2;
-    if (width < 900) return 3;
-    if (width < 1100) return 4;
-    if (width < 1300) return 5;
-    return 6;
+  function getColumnCount(width, collapsed) {
+    if (collapsed) {
+      if (width < 500) return 2;
+      if (width < 700) return 3;
+      if (width < 900) return 4;
+      if (width < 1100) return 5;
+      if (width < 1300) return 6;
+      return 7;
+    } else {
+      if (width < 500) return 1;
+      if (width < 700) return 2;
+      if (width < 900) return 3;
+      if (width < 1100) return 4;
+      if (width < 1300) return 5;
+      return 6;
+    }
   }
 
- 
   const [columnsPerRow, setColumnsPerRow] = useState(
-    getColumnCount(window.innerWidth)
+    getColumnCount(window.innerWidth, sidebarCollapsed)
   );
 
   useEffect(() => {
     const handleResize = () => {
-      const newCount = getColumnCount(window.innerWidth);
+      const newCount = getColumnCount(window.innerWidth, sidebarCollapsed);
       setColumnsPerRow(newCount);
       setCurrentPage(0);
     };
@@ -31,7 +42,7 @@ export default function Gallery({  setSelectedItem,
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [sidebarCollapsed]);
 
   const rowsPerPage = 4;
   const itemsPerPage = columnsPerRow * rowsPerPage;
@@ -69,10 +80,9 @@ export default function Gallery({  setSelectedItem,
   const filteredItems = applyFilters(items);
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
 
-useEffect(() => {
-  setTotalPages(Math.ceil(filteredItems.length / itemsPerPage));
-}, [filteredItems, itemsPerPage]);
-
+  useEffect(() => {
+    setTotalPages(Math.ceil(filteredItems.length / itemsPerPage));
+  }, [filteredItems, itemsPerPage]);
 
   const getChunkedRows = () => {
     const start = currentPage * itemsPerPage;
@@ -108,7 +118,7 @@ useEffect(() => {
                   flex: `1 1 calc((100% - ${
                     columnsPerRow - 1
                   } * 2rem) / ${columnsPerRow})`,
-                  maxWidth: "180px",
+                  maxWidth: "175px",
                 }}
                 onClick={() => setSelectedItem(item)}
               >

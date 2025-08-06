@@ -11,7 +11,17 @@ function App() {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [showOverlay, setShowOverlay] = useState(true);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(window.innerWidth < 800);
 
+   useEffect(() => {
+    const handleResize = () => {
+      setSidebarCollapsed(window.innerWidth < 800);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowOverlay(false);
@@ -62,7 +72,7 @@ function App() {
     <>
       {showOverlay && (
         <div className="intro-overlay">
-          <WelcomeScreen/>
+          <WelcomeScreen />
         </div>
       )}
       <div className="app">
@@ -72,14 +82,19 @@ function App() {
           setFilters={setFilters}
           options={options}
         />
-        <div className="main">
-          <Sidebar selectedItem={selectedItem} />
+        <div className={`main ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
+          <Sidebar
+            selectedItem={selectedItem}
+            collapsed={sidebarCollapsed}
+            setCollapsed={setSidebarCollapsed}
+          />
           <Gallery
             setSelectedItem={setSelectedItem}
             filters={filters}
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
             setTotalPages={setTotalPages}
+            sidebarCollapsed={sidebarCollapsed}
           />
         </div>
         <Footer

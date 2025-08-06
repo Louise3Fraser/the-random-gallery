@@ -27,12 +27,37 @@ p {
 
 em {
   font-style: italic;
+  margin-top: 2px;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.sidebar-container {
+  position: relative;
+  padding: 18px 22px;
+  border-right: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.collapse-toggle {
+  background-color: #0f0f0f;
+  color: #eee;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  border: 1px solid #333;
+  border-radius: 0px;
+  padding: 5px 6px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  z-index: 10;
 }
 
 .sidebar-divider {
@@ -72,8 +97,13 @@ em {
 .main {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: min(28vw, 410px) 1fr;
   overflow: hidden;
+  transition: grid-template-columns 0.5s ease;
+}
+
+.main.sidebar-collapsed {
+  grid-template-columns: 50px 1fr;
 }
 
 .separator {
@@ -96,6 +126,7 @@ em {
   border-right: 1px solid #333;
   box-sizing: border-box;
 }
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -121,7 +152,7 @@ em {
 .vertical {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow-y: hidden;
   max-height: calc((100% - (2 * 25px)));
 }
 .main-image {
@@ -324,7 +355,6 @@ em {
     opacity: 1;
   }
 }
-
 
 .intro-content {
   animation: fadeOutText 5s ease forwards;
