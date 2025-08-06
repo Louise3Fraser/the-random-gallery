@@ -118,12 +118,11 @@ em {
   cursor: pointer;
 }
 
-
 .vertical {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  max-height: calc((100% - (2 * 22px)));
+  max-height: calc((100% - (2 * 25px)));
 }
 .main-image {
   width: 100%;
@@ -151,7 +150,7 @@ em {
 }
 
 .item-container {
-  padding: 15px;
+  padding: 17px;
 }
 
 .item-container-lg {
@@ -203,11 +202,18 @@ em {
 
 .pagination {
   margin-top: 0;
-  padding-top: 12px;
   display: flex;
   justify-content: flex-start;
   gap: 6px;
 }
+
+.pagination,
+.page-button {
+  font-family: "Marist", serif;
+}
+
+
+
 .page-button {
   background: none;
   border: none;
@@ -224,7 +230,7 @@ em {
 
 .page-button.active {
   font-style: italic;
-  cursor: default;
+  margin-bottom: -3px; 
 }
 
 .dots {

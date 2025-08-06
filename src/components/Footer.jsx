@@ -1,12 +1,23 @@
-export default function Footer() {
+export default function Footer({ currentPage, totalPages, onPageChange }) {
   return (
     <footer className="footer">
-      © Louise Fraser, 2025
+        
       <span className="footer-links">
+        © Louise Fraser, 2025
         <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://louisebfraser.com" target="_blank" rel="noreferrer">Portfolio</a>
-        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
       </span>
+      <div className="pagination">
+        {Array.from({ length: totalPages }, (_, i) => (
+          <button
+            key={i}
+            className={`page-button ${i === currentPage ? "active" : ""}`}
+            onClick={() => onPageChange(i)}
+          >
+            {i + 1}
+          </button>
+        ))}
+      </div>
     </footer>
   );
 }

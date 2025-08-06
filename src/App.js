@@ -7,7 +7,8 @@ import "./App.css";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
-  const [selectedTag, setSelectedTag] = useState("");
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
 
   const [filters, setFilters] = useState({
     category: [],
@@ -44,8 +45,8 @@ function App() {
       { value: "green", label: "Green" },
       { value: "yellow", label: "Yellow" },
       { value: "orange", label: "Orange" },
-      { value: "grey", label: "Grey"},
-      { value: "multi", label: "Multi"}
+      { value: "grey", label: "Grey" },
+      { value: "multi", label: "Multi" },
     ],
   };
   return (
@@ -58,9 +59,19 @@ function App() {
       />
       <div className="main">
         <Sidebar selectedItem={selectedItem} />
-        <Gallery setSelectedItem={setSelectedItem} filters={filters} />
+        <Gallery
+          setSelectedItem={setSelectedItem}
+          filters={filters}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          setTotalPages={setTotalPages}
+        />
       </div>
-      <Footer />
+      <Footer
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
       <img
         src="/images/paper-overlay.png"
         className="background-overlay"

@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 
-export default function Gallery({ setSelectedItem, filters }) {
+export default function Gallery({  setSelectedItem,
+  filters,
+  currentPage,
+  setCurrentPage,
+  setTotalPages, }) {
   const [items, setItems] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0);
 
   function getColumnCount(width) {
     if (width < 500) return 1;
@@ -13,6 +16,7 @@ export default function Gallery({ setSelectedItem, filters }) {
     return 6;
   }
 
+ 
   const [columnsPerRow, setColumnsPerRow] = useState(
     getColumnCount(window.innerWidth)
   );
@@ -65,6 +69,11 @@ export default function Gallery({ setSelectedItem, filters }) {
   const filteredItems = applyFilters(items);
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
 
+useEffect(() => {
+  setTotalPages(Math.ceil(filteredItems.length / itemsPerPage));
+}, [filteredItems, itemsPerPage]);
+
+
   const getChunkedRows = () => {
     const start = currentPage * itemsPerPage;
     const pageItems = filteredItems.slice(start, start + itemsPerPage);
@@ -93,14 +102,18 @@ export default function Gallery({ setSelectedItem, filters }) {
           <div className="gallery-row" key={rowIndex}>
             {row.map((item) => (
               <div
-  key={item.id}
-  className="thumbnail"
-  style={{
-    flex: `1 1 calc((100% - ${(columnsPerRow - 1)} * 2rem) / ${columnsPerRow})`,
-    maxWidth: `calc((100% - ${(columnsPerRow - 1)} * 2rem) / ${columnsPerRow})`,
-  }}
-  onClick={() => setSelectedItem(item)}
->
+                key={item.id}
+                className="thumbnail"
+                style={{
+                  flex: `1 1 calc((100% - ${
+                    columnsPerRow - 1
+                  } * 2rem) / ${columnsPerRow})`,
+                  maxWidth: `calc((100% - ${
+                    columnsPerRow - 1
+                  } * 2rem) / ${columnsPerRow})`,
+                }}
+                onClick={() => setSelectedItem(item)}
+              >
                 <p className="id-number">[{item.id}]</p>
                 <div className="item-container">
                   <img src={item.image} alt={item.title} />
@@ -110,18 +123,6 @@ export default function Gallery({ setSelectedItem, filters }) {
           </div>
         ))}
       </div>
-
-      {/* <div className="pagination">
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i}
-            className={`page-button ${i === currentPage ? "active" : ""}`}
-            onClick={() => setCurrentPage(i)}
-          >
-            {i + 1}
-          </button>
-        ))}
-      </div> */}
     </div>
   );
 }
