@@ -195,7 +195,7 @@ em {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.09;
+  opacity: 0.05;
   z-index: 1000;
   pointer-events: none;
 }
@@ -211,8 +211,6 @@ em {
 .page-button {
   font-family: "Marist", serif;
 }
-
-
 
 .page-button {
   background: none;
@@ -230,11 +228,15 @@ em {
 
 .page-button.active {
   font-style: italic;
-  margin-bottom: -3px; 
+  margin-bottom: -3px;
 }
 
 .dots {
   margin: 0 0.3rem;
+}
+
+.sidebar.fade-in {
+  animation: fadeIn 0.4s ease-in both;
 }
 
 .fade-in {
@@ -247,5 +249,90 @@ em {
   }
   to {
     opacity: 1;
+  }
+}
+
+.welcome-screen {
+  font-family: "Marist", serif;
+  background-color: #0f0f0f;
+  color: #eee;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #0f0f0f;
+  color: #eee;
+  font-family: "Marist", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-size: 2rem;
+  animation: fadeOut 5s ease forwards;
+  animation-delay: 9s;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.fade-in-welcome {
+  opacity: 0;
+  animation: fadeInWelcome 1.5s ease-in forwards;
+  font-size: 13.5px;
+}
+
+.falling-title {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 0.6px;
+}
+
+.falling-letter {
+  opacity: 0;
+  display: inline-block;
+  animation: fallIn 2.5s ease-out forwards;
+  margin-right: 1.5px;
+}
+
+@keyframes fadeInWelcome {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fallIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+.intro-content {
+  animation: fadeOutText 5s ease forwards;
+  animation-delay: 5s; /* fade out before overlay disappears */
+}
+
+@keyframes fadeOutText {
+  to {
+    opacity: 0;
   }
 }

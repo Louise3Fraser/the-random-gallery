@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TopNav from "./components/TopNav";
 import Sidebar from "./components/Sidebar";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import "./App.css";
+import WelcomeScreen from "./components/Welcome";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
+  const [showOverlay, setShowOverlay] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowOverlay(false);
+    }, 13000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const [filters, setFilters] = useState({
     category: [],
@@ -50,34 +59,41 @@ function App() {
     ],
   };
   return (
-    <div className="app">
-      <TopNav
-        setSelectedItem={setSelectedItem}
-        filters={filters}
-        setFilters={setFilters}
-        options={options}
-      />
-      <div className="main">
-        <Sidebar selectedItem={selectedItem} />
-        <Gallery
+    <>
+      {showOverlay && (
+        <div className="intro-overlay">
+          <WelcomeScreen/>
+        </div>
+      )}
+      <div className="app">
+        <TopNav
           setSelectedItem={setSelectedItem}
           filters={filters}
+          setFilters={setFilters}
+          options={options}
+        />
+        <div className="main">
+          <Sidebar selectedItem={selectedItem} />
+          <Gallery
+            setSelectedItem={setSelectedItem}
+            filters={filters}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            setTotalPages={setTotalPages}
+          />
+        </div>
+        <Footer
           currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          setTotalPages={setTotalPages}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
+        <img
+          src="/images/paper-overlay.png"
+          className="background-overlay"
+          alt=""
         />
       </div>
-      <Footer
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-      />
-      <img
-        src="/images/paper-overlay.png"
-        className="background-overlay"
-        alt=""
-      />
-    </div>
+    </>
   );
 }
 
