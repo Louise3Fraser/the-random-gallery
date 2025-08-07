@@ -30,6 +30,16 @@ em {
   margin-top: 2px;
 }
 
+a {
+  color: hsl(0, 0%, 50%);
+  text-decoration: none;
+  font-style: italic;
+  transition: color 0.3s ease
+}
+a:hover {
+  color: #ccc;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -41,6 +51,7 @@ em {
   padding: 18px 22px;
   border-right: 1px solid #333;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .collapse-toggle {
@@ -138,7 +149,6 @@ em {
 .gallery-row {
   display: flex;
   gap: 2rem;
-  justify-content: space-between;
 }
 
 .thumbnail {

@@ -98,7 +98,7 @@ export default function Gallery({
 
   const chunkedRows = getChunkedRows();
   const currentRowCount = chunkedRows.length;
-  const isSparsePage = currentRowCount < 3;
+  const isSparsePage = currentRowCount < 3 || columnsPerRow < 3;;
 
   return (
     <div class="vertical">
@@ -109,7 +109,9 @@ export default function Gallery({
         }}
       >
         {chunkedRows.map((row, rowIndex) => (
-          <div className="gallery-row" key={rowIndex}>
+          <div className="gallery-row"  style={{
+          justifyContent: isSparsePage ? "flex-start" : "space-between",
+        }} key={rowIndex}>
             {row.map((item) => (
               <div
                 key={item.id}

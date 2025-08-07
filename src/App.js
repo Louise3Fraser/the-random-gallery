@@ -11,9 +11,11 @@ function App() {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [showOverlay, setShowOverlay] = useState(true);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(window.innerWidth < 800);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(
+    window.innerWidth < 800
+  );
 
-   useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setSidebarCollapsed(window.innerWidth < 800);
     };
@@ -21,11 +23,11 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowOverlay(false);
-    }, 13000);
+    }, 12000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,6 +41,7 @@ function App() {
     category: [
       { value: "artifact", label: "Artifact" },
       { value: "natural", label: "Natural" },
+      { value: "edible", label: "Edible" },
       { value: "technology", label: "Technology" },
       { value: "currency", label: "Currency" },
       { value: "toy", label: "Toy/Game" },
@@ -46,14 +49,18 @@ function App() {
       { value: "furniture", label: "Furniture" },
       { value: "jewelry", label: "Jewelry" },
       { value: "art", label: "Art" },
+      { value: "sports", label: "Sports" },
+      { value: "outerspace", label: "Outerspace" },
     ],
     culture: [
       { value: "ancient", label: "Ancient" },
       { value: "modern", label: "Modern" },
       { value: "medieval", label: "Medieval" },
       { value: "american", label: "American" },
+      { value: "russian", label: "Russian" },
       { value: "asian", label: "Japanese" },
       { value: "european", label: "European" },
+      { value: "greek", label: "Greek" },
       { value: "unknown", label: "Unknown" },
     ],
     color: [
@@ -65,7 +72,10 @@ function App() {
       { value: "yellow", label: "Yellow" },
       { value: "orange", label: "Orange" },
       { value: "grey", label: "Grey" },
+      { value: "white", label: "White" },
       { value: "multi", label: "Multi" },
+      { value: "silver", label: "Silver"},
+      { value: "rainbow", label: "Rainbow" },
     ],
   };
   return (

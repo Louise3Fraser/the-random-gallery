@@ -41,8 +41,16 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
           ) : (
             <>
               <div className="flex-apart">
-                <div style={{display: "flex", flexDirection: "row", gap: "5px", alignContent:"center"}}>
-                 <p style={{fontSize: "12px"}}>[{selectedItem.id}]</p> <em >{selectedItem.title}</em> 
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "5px",
+                    alignContent: "center",
+                  }}
+                >
+                  <p style={{ fontSize: "12px" }}>[{selectedItem.id}]</p>{" "}
+                  <em>{selectedItem.title}</em>
                 </div>
               </div>
               <div className="item-container-lg">
@@ -53,9 +61,15 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
                 />
               </div>
               <div className="sidebar-divider" />
-              <div className="flex-apart">
-                <em>Discovery</em> <p>{selectedItem.discovery}</p>
-              </div>
+              {selectedItem.discovery ? (
+                <div className="flex-apart">
+                  <em>Discovery</em> <p>{selectedItem.discovery}</p>
+                </div>
+              ) : (
+                <div className="flex-apart">
+                  <em>Created</em> <p>{selectedItem.created}</p>
+                </div>
+              )}
               <div className="separator-lg" />
               {selectedItem.description.map((line, i) => (
                 <div key={i}>
@@ -63,6 +77,15 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
                   <div className="separator" />
                 </div>
               ))}
+              {selectedItem.links ? (
+                <>
+                  {selectedItem.links.map((link, i) => (
+                    <a target="_blank" rel="noopener noreferrer" href={link[0]}>{link[1]} ↗</a>
+                  ))}
+                </>
+              ) : (
+                <></>
+              )}
             </>
           )}
         </div>

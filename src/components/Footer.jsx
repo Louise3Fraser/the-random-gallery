@@ -3,7 +3,7 @@ export default function Footer({ currentPage, totalPages, onPageChange }) {
     <footer className="footer">
         
       <span className="footer-links">
-        © Louise Fraser, 2025
+        © Louise Fraser 2025
         <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://louisebfraser.com" target="_blank" rel="noreferrer">Portfolio</a>
       </span>

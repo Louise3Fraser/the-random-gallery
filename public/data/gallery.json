@@ -13,7 +13,6 @@
     "color": ["grey"],
     "culture": ["ancient"]
   },
-
   {
     "id": 2,
     "title": "Kyawthuite",
@@ -22,7 +21,6 @@
     "description": [
       "Kyawthuite is the rarest mineral on earth. It is so rare, in fact, that only one specimen has ever been discovered (creds to Dr. Kyaw Thu -- Burmese gemologist).",
       "The gem is approximately 1.61 carats in size and has a beautiful reddish-orange color. Researchers believe it was formed in pegmatite, which is a type of igneous rock.",
-
       "Wondering how small the 1.61 carats actually is? It's roughly the weight of 15-20 grains of salt! It's a wonder this gem was found at all. Makes me wonder how many other rare minerals are out there, waiting to be discovered."
     ],
     "category": ["natural"],
@@ -43,293 +41,329 @@
   },
   {
     "id": 4,
-    "title": "butterfly",
+    "title": "GJ 504 b",
     "image": "/images/4-pinkplanet.png",
-    "discovery": "Ancient resin, polished",
+    "discovery": "2013, Subaru Telescope in Hawaii",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
+      "I think this would be Barbie's favorite planet.",
+      "This massive world is composed of pink gas. Structurally similar to Jupiter but several times more massive, its temperature reaches up to 460°F (237°C).",
+      "Frozen water droplet clouds scatter the atmosphere. There is no solid surface to this planet, as it is made from gas. If not for the extreme heat, a ship could pass straight through its reddish, superheated core."
     ],
-    "category": ["natural"],
-    "color": ["orange"],
-    "culture": ["modern"]
+    "category": ["natural", "outerspace"],
+    "color": ["pink"]
   },
   {
     "id": 5,
-    "title": "butterfly",
+    "title": "Imperial Tsarevich Easter Egg",
     "image": "/images/5-egg.png",
-    "discovery": "Ancient resin, polished",
+    "created": "1912",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
+      "The Tsarevich egg is one of the many famed Fabergé eggs, a collection of jeweled masterpieces created by the jewelry firm, House of Fabrergé.",
+      "This particular egg was gifted by Tsar Nicholas II to the Empress Alexandra Feodorovna in 1912. The exterior of the egg features vibrant lapis lazuli with intricate gold cagework.",
+      "Inside, it holds a special surprise: a miniature portrait of Tsarevich Alexei, son of the Empress.",
+      "The egg is estimated to be worth $10-$15 million."
     ],
-    "category": ["natural"],
-    "color": ["orange"],
-    "culture": ["modern"]
+    "category": ["artifact", "art"],
+    "color": ["blue", "gold"],
+    "culture": ["russian"]
   },
   {
     "id": 6,
-    "title": "butterfly",
+    "title": "Bezoar",
     "image": "/images/6-goat.png",
-    "discovery": "Ancient resin, polished",
+    "discovery": "11th century",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
+      "I’m not ashamed to admit that most of my knowledge of bezoars came from Harry Potter. In the series, they’re described as antidotes to many poisons.",
+      "Real bezoars are hardened masses of undigested material that accumulate in the gastrointestinal tract of animals such as goats or deers. These masses may include hair or plant fibers that were compressed over time.",
+      "It is true, however, that bezoars were considered universal antidotes to poison in medieval Europe. However, they weren’t to be ingested. Instead, they were carried as charms or set into jewelry for protection."
     ],
     "category": ["natural"],
-    "color": ["orange"],
-    "culture": ["modern"]
+    "color": ["multi"],
+    "culture": ["european"]
   },
   {
     "id": 7,
-    "title": "butterfly",
+    "title": "Bismuth",
     "image": "/images/7-formation.png",
-    "discovery": "Ancient resin, polished",
+    "discovery": "15th century",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
+      "Bismuth is a brittle silvery-white metallic element that turns into beautiful iridescent hues of blue, pink, yellow, and green due to thin oxide layers.",
+      "It is actually one of the heaviest metals discovered, yet it is non-toxic and has many uses.",
+      "For example, Pepto-Bismol, the well-known over-the-counter medication, has the active ingedient bismuth subsalicylate."
     ],
     "category": ["natural"],
-    "color": ["orange"],
-    "culture": ["modern"]
+    "color": ["white", "rainbow"]
   },
   {
     "id": 8,
-    "title": "Roman dodecahedron",
+    "title": "Juliet Rose",
     "image": "/images/8-rose.png",
-    "discovery": "1739, France",
+    "created": "2006",
     "description": [
-      "Each face has a circular hole of varying diameter in the middle, the holes connecting to the hollow center, and each corner has a protruding knob.",
-      "Since the first known example was discovered in 1739, over one hundred such objects have been discovered, dating from the 2nd to 4th centuries AD. Their purpose or meaning has been long debated but remains unknown."
+      "The Juliet Rose is one of the most iconic and rarest flowers in the world.",
+      "Bred in 2006 by David Austin, it is the result of 15 years of careful cultivation! It's beauty and unique look makes it quite sought-after. The first bloom reportedly sold for an astonishing $15.8 million!"
     ],
     "category": ["natural"],
-    "color": ["orange"],
-    "culture": ["modern"]
+    "color": ["orange"]
   },
   {
     "id": 9,
-    "title": "Green Butterfly",
+    "title": "Ryujin 3.5",
     "image": "/images/9-origami.png",
-    "discovery": "Unknown",
+    "created": "2005",
     "description": [
-      "A vivid specimen with iridescent wings and perfect symmetry.",
-      "Butterflies often represent transformation or freedom in visual culture."
+      "Ever feel proud of your paper crane... until you see something like this??",
+      "The Ryujin 3.5 is widely considered to be the hardest origami piece of all time. It was created by Japanese origamist Satoshi Kamiya and was inspired by the majestic form of Ryujin, the mythical dragon god.",
+      "The origami piece itself features hundreds of folds and layers, and it originally took Kamiya one month to complete."
     ],
-    "category": ["natural"],
-    "color": ["orange"],
-    "culture": ["modern"]
+    "category": ["art"],
+    "color": ["any"],
+    "culture": ["japanese"]
   },
   {
     "id": 10,
-    "title": "butterfly",
+    "title": "Jellycat Imogen Bashful Bunny",
     "image": "/images/10-jellycat.png",
-    "discovery": "Ancient resin, polished",
+    "created": "2011",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "This special edition Jellycat is considered the rarest of its kind. It was first released to the public in 2011, but since then, finding one has been a challenge for serious collectors.",
+      "An Imogen is worth $600+."
+    ],
+    "category": ["toy"],
+    "color": ["pink"],
+    "culture": ["european"]
   },
   {
     "id": 11,
-    "title": "butterfly",
+    "title": "Six Leaf Clover",
     "image": "/images/11-clover.png",
     "discovery": "Ancient resin, polished",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
+      "A six leaf clover is an even rarer botanical curiosity than the famed four leaf clover. And according to legend, the more leaves, the more luck.",
+      "It's occasionally found in nature due to either genetic mutations or environmental stressors. Finding one is believed to be a symbol of extraordinary good fortune, spotting one is a moment cherished by enthusiasts and folklorists."
+    ],
+    "category": ["natural"],
+    "color": ["green"],
+    "links": [
+      [
+        "https://www.usatoday.com/story/news/nation/2020/08/12/illinois-woman-finds-rare-six-leaf-clover/3346209001/",
+        "Read: woman finds 6-leaf clover after searching for years"
+      ]
     ]
   },
   {
     "id": 12,
-    "title": "butterfly",
+    "title": "Lysimachos Tetradrachm",
     "image": "/images/12-coin.png",
-    "discovery": "Ancient resin, polished",
+    "created": "308-281 BC",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "The Lysimachos Tetradrachm was an ancient Greek silver coin created under King Lysimachos, a successor of Alexander the Great (reigned c. 323–281 BC).",
+      "On the front, these tetradrachms typically feature the head of Alexander wearing a lion skin headdress. And on the back, it shows Zeus seated enthroned with an eagle and scepter.",
+      "These coins are especially valued both for their historical importance and fine craftsmanship."
+    ],
+    "category": ["ancient", "currency"],
+    "color": ["gold"],
+    "culture": ["greek"]
   },
   {
     "id": 13,
-    "title": "butterfly",
+    "title": "The Lincoln Chair",
     "image": "/images/13-chair.png",
     "discovery": "Ancient resin, polished",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "President Abraham Lincoln was sitting in this wooden armchair when he was assassinated on the night of April 1865 in Ford's Theatre. The chair has since become a symbol of said tragedy; it’s now preserved at the Henry Ford Museum.",
+      "Interestingly, Lincoln specifically requested a rocking chair whenever he attended the theater, as he found it more comfortable than a standard seat."
+    ],
+    "category": ["furniture", "artifact"],
+    "color": ["red"],
+    "culture": ["american"]
   },
   {
     "id": 14,
-    "title": "butterfly",
+    "title": "1937 Negro League East-West All-Star Game baseball",
     "image": "/images/14-baseball.png",
-    "discovery": "Ancient resin, polished",
+    "discovery": "1937",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "This was the official baseball from the 1937 East‑West All‑Star Game (a showcase of the Negro Leagues) and it carries immense cultural significance.",
+      "The game was one of the era’s largest African-American sporting events. Over 60,000 people attended the event.",
+      "During the game, first baseman Buck Leonard played as part of the East team and won 7 to 2. He kept the baseball as a personal memento of that victory. Beyond his own story, the ball symbolized the broader struggles and triumphs of the Negro Leagues."
+    ],
+    "category": ["modern", "artifact", "sports"],
+    "color": ["white", "red"],
+    "culture": ["american"]
   },
   {
     "id": 15,
-    "title": "butterfly",
+    "title": "Classic Writing Slope",
     "image": "/images/15-writing.png",
-    "discovery": "Ancient resin, polished",
+    "created": "17th century",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "A writing slope was a portable writing surface, usually crafted from wood, with an angled top. Its purpose was to make writing more comfortable. It allowed writers, officers, and officials to work anywhere without hunching over a desk.",
+      "These are the kinds of tools we rarely think about today (especially following the invention of the computer), but for some, they were essential. Writing slopes are still used today, but were first introduced around the late 17th century."
+    ],
+    "category": ["tool"],
+    "color": ["any", "brown"],
+    "culture": ["european"]
   },
   {
     "id": 16,
-    "title": "butterfly",
+    "title": "Astrolabe",
     "image": "/images/16-astrolabe.png",
     "discovery": "Ancient resin, polished",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "Fun fact: I actually made a life size replica of one of these in the 5th grade. It was fascinating.",
+      "An astrolabe is an ancient astronomical instrument that was used to determine the time and altitude of celestial objects.",
+      "A classic astrolabe displays the celestial dome with engraved star maps and zodiac signs. It allowed navigators to determine things like time, direction, or even solve mathematical problems.",
+      "These artifacts were prized in Islamic, Greek, and medieval European civilizations."
+    ],
+    "category": ["tool", "ancient", "artifact"],
+    "color": ["gold"],
+    "culture": ["european", "greek"]
   },
   {
     "id": 17,
-    "title": "butterfly",
+    "title": "Buddha’s Hand",
     "image": "/images/17-lemon.png",
     "discovery": "Ancient resin, polished",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "As the name would suggest, this funky-looking citron is known for its unique finger-like shape.",
+      "It is prized in East Asia for its intense lemon perfume and symbolic meaning. It's also usually used in cooking, perfuming, and decoration. Its segmented form resembles praying hands, symbolizing happiness and longevity in Buddhist cultures."
+    ],
+    "category": ["natural", "edible"],
+    "culture": ["asia"],
+    "color": ["yellow"]
   },
   {
     "id": 18,
-    "title": "butterfly",
+    "title": "Pan",
     "image": "/images/18-moon.png",
-    "discovery": "Ancient resin, polished",
+    "discovery": "1985",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "Don't be fooled: this isn't a flying ravioli. Rather, it is Saturn's innermost moon.",
+      "Its unique shape is due to a prominent equatorial ridge that surrounds the equator. How did this happen? The leading theory is that the bulge was formed by sweeping up particles from Saturn’s rings.",
+      "The moon was named after Pan, the half-goat satyr and god of sheperds from Greek mythology (Percy Jackson fans, anyone?). Fittingly, Pan is also classified as a 'shepherd moon', or a moon that helps maintain the sharp edges of Saturn’s rings."
+    ],
+    "category": ["natural", "outerspace"],
+    "color": ["white"]
   },
   {
     "id": 19,
-    "title": "butterfly",
+    "title": "Nebra Sky Disc",
     "image": "/images/19-moonartifact.png",
-    "discovery": "Ancient resin, polished",
+    "created": "1600 BC",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "The Nebra Sky Disc is considered one of the most important finds of the past century. It is dated to the Early Bronze Age, and depicts the circular Sun or moon, a crescent moon, and roughly 32 stars, making it the oldest known concrete depiction of astronomical phenomena.",
+      "The disc was believed to have been used as a portable astronomical tool, possibly as a calendar. Indeed, some scholar believe it encoded agricultural calendar rules, such as harmonizing the lunar and solar years.",
+      "It's no surprise the disc is valued at about $11 million. It is currently on display at the British Museum of London."
+    ],
+    "category": ["artifact", "tool"],
+    "color": ["gold", "blue", "multi"]
   },
   {
     "id": 20,
-    "title": "butterfly",
+    "title": "Tea Caddy Spoon",
     "image": "/images/20-spoon.png",
-    "discovery": "Ancient resin, polished",
+    "created": "18th century",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "This tool is an ornate small spoon, typically made from silver in the 18th and 19th centuries, and was designed for measuring loose tea leaves from a storage caddy into the teapot.",
+      "These spoons often had squat, flat bowls and elaborate handles to match fancy caddy sets and tea service trays. By around 1770, silversmiths in London and Sheffield were producing various forms, and by the early 19th century they became collectible decorative pieces as well as practical utensils."
+    ],
+    "category": ["tool"],
+    "culture": ["european"],
+    "color": ["silver"]
   },
-
   {
     "id": 21,
-    "title": "Roman dodecahedron",
+    "title": "The First Coca-Cola Bottle",
     "image": "/images/21-coca.png",
-    "discovery": "1739, France",
+    "created": "1894",
     "description": [
-      "A Roman docecahedron is a famously mysterious ancient artifact. As the name suggests, it has 12 sides, each with a hole connecting to a hollow center, and every corner features a protruding knob.",
-      "The first known example was discovered in 1739, but since then, over one hundred other ones have been found.",
-      "But what were they used for? This question has long sparked debate. Theories range from mathematical instruments and religious artifacts to candlestick holders, tent-building tools, or even knitting devices."
-    ]
+      "The earliest commercially bottled Coca‑Cola appeared on March 12 1894, bottled by Joseph A. Biedenharn in Vicksburg, Mississippi. These were plain Hutchinson-style bottles used before the iconic shape existed.",
+      "The now-famous contour “Coke bottle” design was later developed in 1915–16"
+    ],
+    "category": ["artifact"],
+    "culture": ["american"]
   },
   {
     "id": 22,
-    "title": "Green Butterfly",
+    "title": "Original Game Boy",
     "image": "/images/22-gameboy.png",
-    "discovery": "Unknown",
+    "created": "1989",
     "description": [
-      "A vivid specimen with iridescent wings and perfect symmetry.",
-      "Butterflies often represent transformation or freedom in visual culture."
-    ]
+      "The first Game Boy was launched by Nintendo in April 1989.",
+      "Despite modest graphics and monochrome display, it became a massive hit and sold approximately 118.7 million units worldwide."
+    ],
+    "category": ["artifact", "toy"],
+    "color": ["grey"],
+    "culture": ["american"]
   },
   {
     "id": 23,
-    "title": "butterfly",
+    "title": "Dala Horse",
     "image": "/images/23-horse.png",
-    "discovery": "Ancient resin, polished",
+    "created": "17th century",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "A Dala Horse is believed to bring good fortune. It was traditionally hand-carved in Dalarna, central Sweden, and now serves as a beloved icon in Swedish culture.",
+      "Many of today’s Dala horses are still crafted using centuries-old pine wood and painted in the distinctive folk-art style."
+    ],
+    "category": ["artifact", "toy", "art"],
+    "color": ["red"],
+    "culture": ["european"]
   },
   {
     "id": 24,
-    "title": "butterfly",
+    "title": "Grape Scissors",
     "image": "/images/24-scissors.png",
-    "discovery": "Ancient resin, polished",
+    "created": "19th century",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
+      "A specialized pair of small, curved shears used historically for harvesting grape clusters.",
+      "These fancy guys were part of elite household dining in 19th‑century Europe."
+    ],
+    "category": ["tool"],
+    "color": ["silver"],
+    "culture": ["european"],
+    "links": [
+      [
+        "https://www.tiktok.com/@williamhansonetiquette/video/7365960273506684192?lang=en",
+        "Check out this hilarious TikTok: grape scissors etiquette"
+      ]
     ]
   },
   {
     "id": 25,
-    "title": "butterfly",
+    "title": "Pepper X",
     "image": "/images/25-pepper.png",
-    "discovery": "Ancient resin, polished",
+    "created": "2023",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "I like spice as much as the next person, but you wouldn't catch me within ten feet of this thing.",
+      "Pepper X is the newest feat of heat engineering. It officially surpasses the Carolina Reaper, making it the hottest pepper in the world.",
+      "It registers well over 2 million Scoville Heat Units. A quick online search will bring up plenty of wild challenge videos (that are actually quite entertaining)."
+    ],
+    "category": ["edible"],
+    "color": ["yellow", "green"],
+    "culture": ["modern"]
   },
   {
     "id": 26,
-    "title": "butterfly",
+    "title": "1x1 Lego Brick",
     "image": "/images/26-lego.png",
-    "discovery": "Ancient resin, polished",
+    "discovery": "1950s",
     "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
+      "While some people think they are fake, the 1x1 Lego bricks were actually introduced to the world in late 1954/1955 and used for small house sets.",
+      "The pieces come in square (pictured) and round formations. Although not the rarest Lego brick, they are quite funny to look at and therefore special in my eyes."
+    ],
+    "category": ["toy"],
+    "color": ["any"],
+    "culture": ["american"]
   },
   {
     "id": 27,
-    "title": "butterfly",
+    "title": "Stinking Toe Fruit",
     "image": "/images/27-fruit.png",
     "discovery": "Ancient resin, polished",
     "description": [
       "A fiery, rectangular-cut gem known for its organic origin.",
       "Amber can contain trapped insects and dates back millions of years."
-    ]
-  },
-  {
-    "id": 28,
-    "title": "butterfly",
-    "image": "/images/28-star.png",
-    "discovery": "Ancient resin, polished",
-    "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
-  },
-  {
-    "id": 29,
-    "title": "Roman dodecahedron",
-    "image": "/images/29-cat.png",
-    "discovery": "1739, France",
-    "description": [
-      "A Roman docecahedron is a famously mysterious ancient artifact. As the name suggests, it has 12 sides, each with a hole connecting to a hollow center, and every corner features a protruding knob.",
-      "The first known example was discovered in 1739, but since then, over one hundred other ones have been found.",
-      "But what were they used for? This question has long sparked debate. Theories range from mathematical instruments and religious artifacts to candlestick holders, tent-building tools, or even knitting devices."
-    ]
-  },
-  {
-    "id": 30,
-    "title": "Green Butterfly",
-    "image": "/images/30-jar.png",
-    "discovery": "Unknown",
-    "description": [
-      "A vivid specimen with iridescent wings and perfect symmetry.",
-      "Butterflies often represent transformation or freedom in visual culture."
     ]
   }
 ]
