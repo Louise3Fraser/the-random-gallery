@@ -36,6 +36,11 @@ a {
   font-style: italic;
   transition: color 0.3s ease
 }
+
+.p-grey {
+    color: hsl(0, 0%, 50%);
+
+}
 a:hover {
   color: #ccc;
 }
@@ -98,6 +103,9 @@ a:hover {
   align-items: center;
 }
 
+#form_email {
+  padding: 0px !important;
+}
 .top-line {
   height: 1px;
   background-color: #333;
@@ -215,15 +223,18 @@ a:hover {
 }
 
 .footer-links a {
-  color: #ccc;
   margin-left: 1.5rem;
+    margin-top: 2px;
+
   text-decoration: none;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
+}
 .nav-title {
   cursor: pointer;
   user-select: none;
