@@ -63,6 +63,11 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
                 oddly fascinating. If you’ve ever gone down a rabbit hole or
                 lost track of time in a museum, you’re in the right place.
               </p>
+              <div className="separator" />
+
+              <p>
+               This site is still a work in progress. Tweaks and improvements coming soon!
+              </p>
 
               <div className="sidebar-divider" />
               <div className="flex-apart">
