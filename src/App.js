@@ -42,7 +42,7 @@ function App() {
       { value: "artifact", label: "Artifact" },
       { value: "natural", label: "Natural" },
       { value: "edible", label: "Edible" },
-      { value: "technology", label: "Technology" },
+      { value: "technology", label: "Tech" },
       { value: "currency", label: "Currency" },
       { value: "toy", label: "Toy/Game" },
       { value: "tool", label: "Tool" },
@@ -50,7 +50,7 @@ function App() {
       { value: "jewelry", label: "Jewelry" },
       { value: "art", label: "Art" },
       { value: "sports", label: "Sports" },
-      { value: "outerspace", label: "Outerspace" },
+      { value: "outerspace", label: "Space" },
     ],
     culture: [
       { value: "ancient", label: "Ancient" },

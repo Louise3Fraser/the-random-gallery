@@ -161,8 +161,8 @@
       "On the front, these tetradrachms typically feature the head of Alexander wearing a lion skin headdress. And on the back, it shows Zeus seated enthroned with an eagle and scepter.",
       "These coins are especially valued both for their historical importance and fine craftsmanship."
     ],
-    "category": ["ancient", "currency"],
-    "color": ["gold"],
+    "category": ["ancient", "currency", "artifact"],
+    "color": ["silver"],
     "culture": ["greek"]
   },
   {

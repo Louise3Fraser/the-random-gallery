@@ -9,7 +9,7 @@ const customStyles = {
     borderRadius: "999px",
     fontFamily: "Marist, serif",
     color: "#ccc",
-    boxShadow: "none",
+    boxShadow: "none", 
     height: "24px",
     minHeight: "24px",
     fontSize: "12px",
@@ -36,10 +36,11 @@ const customStyles = {
   menu: (base) => ({
     ...base,
     backgroundColor: "#111",
-    border: "1px solid #ccc",
+    border: "1px solid #333",
     borderRadius: "7px",
     marginTop: "0px",
     zIndex: 9999,
+    color: "#ccc"
   }),
   option: (base, state) => ({
     ...base,
