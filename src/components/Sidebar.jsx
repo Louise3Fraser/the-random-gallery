@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
   const contentKey = selectedItem ? `item-${selectedItem.id}` : "welcome";
-
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
@@ -14,8 +13,17 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
       return () => document.body.removeChild(script);
     }
   }, [showForm]);
+
   return (
-    <div className={"sidebar-container"}>
+    <div
+      className="sidebar-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "calc(100vh - 110px)",
+        borderRight: "1px solid #333",
+      }}
+    >
       <button
         className="collapse-toggle"
         onClick={() => setCollapsed(!collapsed)}
@@ -25,7 +33,16 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
       </button>
 
       {!collapsed && (
-        <div key={contentKey} className="sidebar-content fade-in">
+        <div
+          key={contentKey}
+          className="sidebar-content fade-in"
+          style={{
+            flex: 1, // take remaining space
+            overflowY: "auto", // vertical scroll
+            padding: "18px 22px",
+            boxSizing: "border-box",
+          }}
+        >
           {!selectedItem ? (
             <>
               <h2>
@@ -39,11 +56,12 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
                 history: from mysterious artifacts to rare discoveries that
                 don’t always get the spotlight.
               </p>
-                                <div className="separator" />
+              <div className="separator" />
 
-<p>
-                Everything here has a story. This site is a celebration of the oddly fascinating.
-                If you’ve ever gone down a rabbit hole or lost track of time in a museum, you’re in the right place.
+              <p>
+                Everything here has a story. This site is a celebration of the
+                oddly fascinating. If you’ve ever gone down a rabbit hole or
+                lost track of time in a museum, you’re in the right place.
               </p>
 
               <div className="sidebar-divider" />
@@ -137,17 +155,17 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
                   <div className="separator" />
                 </div>
               ))}
-              {selectedItem.links ? (
-                <>
-                  {selectedItem.links.map((link, i) => (
-                    <a target="_blank" rel="noopener noreferrer" href={link[0]}>
-                      {link[1]} ↗
-                    </a>
-                  ))}
-                </>
-              ) : (
-                <></>
-              )}
+              {selectedItem.links &&
+                selectedItem.links.map((link, i) => (
+                  <a
+                    key={i}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={link[0]}
+                  >
+                    {link[1]} ↗
+                  </a>
+                ))}
             </>
           )}
         </div>

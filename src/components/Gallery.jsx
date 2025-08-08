@@ -24,9 +24,20 @@ export default function Gallery({
       if (width < 900) return 3;
       if (width < 1100) return 4;
       if (width < 1300) return 5;
-      return 6;
+      if (width < 1700) return 6;
+      return 7;
     }
   }
+
+//     function getRowCount(height) {
+//       if (height < 500) return 2;
+//       if (height < 700) return 3;
+//       if (height < 900) return 4;
+//       if (height < 1100) return 5;
+//       if (height < 1300) return 6;
+//       return 7;
+//     }
+//   }
 
   const [columnsPerRow, setColumnsPerRow] = useState(
     getColumnCount(window.innerWidth, sidebarCollapsed)
@@ -98,7 +109,7 @@ export default function Gallery({
 
   const chunkedRows = getChunkedRows();
   const currentRowCount = chunkedRows.length;
-  const isSparsePage = currentRowCount < 3 || columnsPerRow < 3;;
+  const isSparsePage = currentRowCount < 3 || columnsPerRow < 3;
 
   return (
     <div class="vertical">
@@ -126,7 +137,7 @@ export default function Gallery({
               >
                 <p className="id-number">[{item.id}]</p>
                 <div className="item-container">
-                  <img src={item.image} alt={item.title} />
+                  <img style={{maxHeight: "140px"}} src={item.image} alt={item.title} />
                 </div>
               </div>
             ))}

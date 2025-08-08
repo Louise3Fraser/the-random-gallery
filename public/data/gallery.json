@@ -355,15 +355,5 @@
     "category": ["toy"],
     "color": ["any"],
     "culture": ["american"]
-  },
-  {
-    "id": 27,
-    "title": "Stinking Toe Fruit",
-    "image": "/images/27-fruit.png",
-    "discovery": "Ancient resin, polished",
-    "description": [
-      "A fiery, rectangular-cut gem known for its organic origin.",
-      "Amber can contain trapped insects and dates back millions of years."
-    ]
   }
 ]
