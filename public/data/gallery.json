@@ -355,5 +355,43 @@
     "category": ["toy"],
     "color": ["any"],
     "culture": ["american"]
+  },
+  {
+    "id": 27,
+    "title": "Stinking Toe Fruit",
+    "image": "/images/27-fruit.png",
+    "discovery": "Unknown",
+    "description": [
+      "This fruit gets its name due to its foul odor resembling rotting flesh or cooked toes. Additionally, the shape of the pods are toe-like.",
+      "Despite the smell, the fruit is often involved in baking or blending due to its nutritious value. Some people swear by its ability to be an aphrodisiac or remedy for diarrhea."
+    ],
+    "category": ["natural", "edible"],
+    "color": ["brown"]
+  },
+  {
+    "id": 28,
+    "title": "Neutron Star",
+    "image": "/images/28-star.png",
+    "discovery": "1960s",
+    "description": [
+      "A neutron star is the dense and collapsed core that is left behind after a massive star explodes in a supernova.",
+      "Some people get confused between neutron stars and black holes. While both form from the collapse of massive stars, neutron stars still have a solid surface and are made almost entirely of tightly packed neutrons. Black holes, on the other hand, collapse beyond this point due to having gravity so strong that not even light can escape."
+    ],
+    "category": ["natural", "outerspace"],
+    "color": ["blue", "white"]
+  },
+  {
+    "id": 29,
+    "title": "Kit-Cat Klock",
+    "image": "/images/29-cat.png",
+    "discovery": "1950s",
+    "description": [
+      "These clocks actually used to scare me!",
+      "They were originally launched in the 1930s and feature the iconic smiling, wide-eyed cat-shaped clock with a wagging tail and moving eyes. They were popularized during the Great Depression in America.",
+      "Symbolically, they represent hope and optimism."
+    ],
+    "category": ["artifact", "tool", "furniture", "art"],
+    "color": ["blue", "white"],
+    "culture": ["american"]
   }
 ]
