@@ -1,5 +1,5 @@
 # Louise's digital gallery of random objects
 
-## Welcome, stranger!
+### 👉 ([https://www.the-random-gallery.com/])
 
-Curiosity is at the root of everything I do. I built this site to explore the weird, wonderful corners of history: from mysterious artifacts to rare discoveries that don’t always get the spotlight.
+<img width="3182" height="1842" alt="Screenshot 2025-09-30 at 12 55 51 PM" src="https://github.com/user-attachments/assets/53397c70-2b54-4ed6-b8e9-677d7b8cea96" />
