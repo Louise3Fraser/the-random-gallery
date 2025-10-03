@@ -1,4 +1,4 @@
-# Louise's digital gallery of random objects
+## The Random Gallery
 
 As someone who loves diving into random facts and quirky history, this site was super fun to design and code. I built it with React and designed it in Figma.
 
