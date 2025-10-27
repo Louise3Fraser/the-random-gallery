@@ -25,6 +25,12 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (sidebarCollapsed) {
+      setSidebarCollapsed(false);
+    }
+  }, [selectedItem]);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setShowOverlay(false);
     }, 12000);
@@ -74,7 +80,7 @@ function App() {
       { value: "grey", label: "Grey" },
       { value: "white", label: "White" },
       { value: "multi", label: "Multi" },
-      { value: "silver", label: "Silver"},
+      { value: "silver", label: "Silver" },
       { value: "rainbow", label: "Rainbow" },
     ],
   };
@@ -88,7 +94,6 @@ function App() {
       <div className="app">
         <TopNav
           setSelectedItem={setSelectedItem}
-          filters={filters}
           setFilters={setFilters}
           options={options}
         />

@@ -29,16 +29,6 @@ export default function Gallery({
     }
   }
 
-//     function getRowCount(height) {
-//       if (height < 500) return 2;
-//       if (height < 700) return 3;
-//       if (height < 900) return 4;
-//       if (height < 1100) return 5;
-//       if (height < 1300) return 6;
-//       return 7;
-//     }
-//   }
-
   const [columnsPerRow, setColumnsPerRow] = useState(
     getColumnCount(window.innerWidth, sidebarCollapsed)
   );
@@ -53,7 +43,7 @@ export default function Gallery({
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [sidebarCollapsed]);
+  }, [sidebarCollapsed, setCurrentPage]);
 
   const rowsPerPage = 4;
   const itemsPerPage = columnsPerRow * rowsPerPage;
@@ -89,11 +79,10 @@ export default function Gallery({
   };
 
   const filteredItems = applyFilters(items);
-  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
 
   useEffect(() => {
     setTotalPages(Math.ceil(filteredItems.length / itemsPerPage));
-  }, [filteredItems, itemsPerPage]);
+  }, [filteredItems, itemsPerPage, setTotalPages]);
 
   const getChunkedRows = () => {
     const start = currentPage * itemsPerPage;
@@ -112,7 +101,7 @@ export default function Gallery({
   const isSparsePage = currentRowCount < 3 || columnsPerRow < 3;
 
   return (
-    <div class="vertical">
+    <div className="vertical">
       <div
         className="gallery"
         style={{
@@ -120,9 +109,13 @@ export default function Gallery({
         }}
       >
         {chunkedRows.map((row, rowIndex) => (
-          <div className="gallery-row"  style={{
-          justifyContent: isSparsePage ? "flex-start" : "space-between",
-        }} key={rowIndex}>
+          <div
+            className="gallery-row"
+            style={{
+              justifyContent: isSparsePage ? "flex-start" : "space-between",
+            }}
+            key={rowIndex}
+          >
             {row.map((item) => (
               <div
                 key={item.id}
@@ -137,7 +130,11 @@ export default function Gallery({
               >
                 <p className="id-number">[{item.id}]</p>
                 <div className="item-container">
-                  <img style={{maxHeight: "140px"}} src={item.image} alt={item.title} />
+                  <img
+                    style={{ maxHeight: "140px" }}
+                    src={item.image}
+                    alt={item.title}
+                  />
                 </div>
               </div>
             ))}

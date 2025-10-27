@@ -45,7 +45,6 @@
     "image": "/images/4-pinkplanet.png",
     "discovery": "2013, Subaru Telescope in Hawaii",
     "description": [
-      "I think this would be Barbie's favorite planet.",
       "This massive world is composed of pink gas. Structurally similar to Jupiter but several times more massive, its temperature reaches up to 460°F (237°C).",
       "Frozen water droplet clouds scatter the atmosphere. There is no solid surface to this planet, as it is made from gas. If not for the extreme heat, a ship could pass straight through its reddish, superheated core."
     ],
@@ -393,5 +392,18 @@
     "category": ["artifact", "tool", "furniture", "art"],
     "color": ["blue", "white"],
     "culture": ["american"]
+  },
+  {
+    "id": 30,
+    "title": "Herculaneum Bread Loaf",
+    "image": "/images/31-loaf.png",
+    "created": "79 AD",
+    "description": [
+      "This loaf of sourdough was baked on the morning of the 24th August, 79 CE. ",
+      "It was preserved when Mount Vesuvius erupted later that day, the incredible heat carbonizing the loaf and leaving it intact."
+    ],
+    "category": ["artifact", "edible"],
+    "color": ["green"],
+    "culture": ["ancient"]
   }
 ]

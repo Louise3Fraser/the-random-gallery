@@ -66,12 +66,13 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
               <div className="separator" />
 
               <p>
-               This site is still a work in progress. Tweaks and improvements coming soon!
+                This site is still a work in progress. Tweaks and improvements
+                coming soon!
               </p>
 
               <div className="sidebar-divider" />
               <div className="flex-apart">
-                <em>Current object count</em> <p>27</p>
+                <em>Current object count</em> <p>30</p>
               </div>
               <div className="sidebar-divider" />
 
@@ -106,8 +107,6 @@ export default function Sidebar({ selectedItem, collapsed, setCollapsed }) {
                     src="https://subscribe-forms.beehiiv.com/22f59618-d4df-4461-b41e-f6fd5b052041"
                     className="beehiiv-embed"
                     data-test-id="beehiiv-embed"
-                    frameBorder="0"
-                    scrolling="no"
                     style={{
                       width: "100%",
                       height: "30px",

@@ -9,7 +9,7 @@ const customStyles = {
     borderRadius: "999px",
     fontFamily: "Marist, serif",
     color: "#ccc",
-    boxShadow: "none", 
+    boxShadow: "none",
     height: "24px",
     minHeight: "24px",
     fontSize: "12px",
@@ -20,10 +20,9 @@ const customStyles = {
     paddingRight: 6,
     display: "flex",
     cursor: "pointer",
-    alignItems: "center", // ✅ center vertically
+    alignItems: "center",
     "&:hover": {
       border: "1px solid #333 !important",
-    //   fontStyle: "italic",
     },
   }),
   valueContainer: (base) => ({
@@ -40,7 +39,7 @@ const customStyles = {
     borderRadius: "7px",
     marginTop: "0px",
     zIndex: 9999,
-    color: "#ccc"
+    color: "#ccc",
   }),
   option: (base, state) => ({
     ...base,
@@ -86,7 +85,7 @@ const customStyles = {
     ...base,
     padding: 0,
     marginLeft: 4,
-    width: "12px", // adjust if needed
+    width: "12px",
     justifyContent: "center",
     color: "#5c5b5b",
   }),
@@ -98,12 +97,7 @@ const customStyles = {
   }),
 };
 
-export default function TopNav({
-  setSelectedItem,
-  filters,
-  setFilters,
-  options,
-}) {
+export default function TopNav({ setSelectedItem, setFilters, options }) {
   const handleClick = () => {
     setSelectedItem(null);
   };
