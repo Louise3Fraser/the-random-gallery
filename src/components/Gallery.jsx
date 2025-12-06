@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 
 export default function Gallery({
   setSelectedItem,
@@ -9,6 +9,8 @@ export default function Gallery({
   sidebarCollapsed,
 }) {
   const [items, setItems] = useState([]);
+  const galleryRef = useRef(null);
+  const rowRef = useRef(null);
 
   function getColumnCount(width, collapsed) {
     if (collapsed) {
@@ -32,21 +34,25 @@ export default function Gallery({
   const [columnsPerRow, setColumnsPerRow] = useState(
     getColumnCount(window.innerWidth, sidebarCollapsed)
   );
+  const [rowsPerPage, setRowsPerPage] = useState(4);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const newCount = getColumnCount(window.innerWidth, sidebarCollapsed);
-      setColumnsPerRow(newCount);
-      setCurrentPage(0);
-    };
+  const calculateRowsPerPage = useCallback(() => {
+    if (!galleryRef.current || !rowRef.current) {
+      return 4; // default fallback
+    }
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [sidebarCollapsed, setCurrentPage]);
+    const galleryHeight = galleryRef.current.clientHeight;
+    const rowHeight = rowRef.current.offsetHeight;
 
-  const rowsPerPage = 4;
-  const itemsPerPage = columnsPerRow * rowsPerPage;
+    if (rowHeight <= 0) {
+      return 4; // fallback if row height not measured yet
+    }
+
+    const availableHeight = galleryHeight - 36;
+    const calculatedRows = Math.floor(availableHeight / rowHeight);
+
+    return Math.max(1, Math.min(calculatedRows, 10));
+  }, []);
 
   useEffect(() => {
     fetch("/data/gallery.json")
@@ -81,8 +87,61 @@ export default function Gallery({
   const filteredItems = applyFilters(items);
 
   useEffect(() => {
-    setTotalPages(Math.ceil(filteredItems.length / itemsPerPage));
-  }, [filteredItems, itemsPerPage, setTotalPages]);
+    const handleResize = () => {
+      const newColumnCount = getColumnCount(
+        window.innerWidth,
+        sidebarCollapsed
+      );
+      setColumnsPerRow(newColumnCount);
+
+      setTimeout(() => {
+        const newRowsPerPage = calculateRowsPerPage();
+        setRowsPerPage(newRowsPerPage);
+
+        const newItemsPerPage = newColumnCount * newRowsPerPage;
+        const newTotalPages = Math.ceil(filteredItems.length / newItemsPerPage);
+
+        if (currentPage >= newTotalPages && newTotalPages > 0) {
+          setCurrentPage(Math.max(0, newTotalPages - 1));
+        }
+      }, 50);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [
+    sidebarCollapsed,
+    calculateRowsPerPage,
+    currentPage,
+    setCurrentPage,
+    filteredItems.length,
+  ]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const newRowsPerPage = calculateRowsPerPage();
+      setRowsPerPage(newRowsPerPage);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [columnsPerRow, calculateRowsPerPage]);
+
+  const itemsPerPage = columnsPerRow * rowsPerPage;
+
+  useEffect(() => {
+    const newTotalPages = Math.ceil(filteredItems.length / itemsPerPage);
+    setTotalPages(newTotalPages);
+
+    if (currentPage >= newTotalPages && newTotalPages > 0) {
+      setCurrentPage(Math.max(0, newTotalPages - 1));
+    }
+  }, [
+    filteredItems.length,
+    itemsPerPage,
+    setTotalPages,
+    currentPage,
+    setCurrentPage,
+  ]);
 
   const getChunkedRows = () => {
     const start = currentPage * itemsPerPage;
@@ -100,9 +159,22 @@ export default function Gallery({
   const currentRowCount = chunkedRows.length;
   const isSparsePage = currentRowCount < 3 || columnsPerRow < 3;
 
+  useEffect(() => {
+    if (chunkedRows.length > 0 && rowRef.current && galleryRef.current) {
+      const timer = setTimeout(() => {
+        const newRowsPerPage = calculateRowsPerPage();
+        if (newRowsPerPage !== rowsPerPage) {
+          setRowsPerPage(newRowsPerPage);
+        }
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [chunkedRows.length, calculateRowsPerPage, rowsPerPage]);
+
   return (
     <div className="vertical">
       <div
+        ref={galleryRef}
         className="gallery"
         style={{
           justifyContent: isSparsePage ? "flex-start" : "space-between",
@@ -110,6 +182,7 @@ export default function Gallery({
       >
         {chunkedRows.map((row, rowIndex) => (
           <div
+            ref={rowIndex === 0 ? rowRef : null}
             className="gallery-row"
             style={{
               justifyContent: isSparsePage ? "flex-start" : "space-between",
