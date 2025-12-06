@@ -18,7 +18,6 @@ const customStyles = {
     paddingBottom: 0,
     paddingLeft: 6,
     paddingRight: 6,
-    display: "flex",
     cursor: "pointer",
     alignItems: "center",
     "&:hover": {
@@ -48,12 +47,6 @@ const customStyles = {
     fontFamily: "Marist, serif",
     cursor: "pointer",
   }),
-  dropdownIndicator: (base) => ({
-    ...base,
-    color: "#ccc",
-    padding: "0px",
-    width: "10px",
-  }),
   clearIndicator: (base) => ({ padding: "0px" }),
   multiValue: (base) => ({
     ...base,
@@ -81,6 +74,7 @@ const customStyles = {
     padding: "0 2px",
     fontSize: "10px",
   }),
+
   dropdownIndicator: (base) => ({
     ...base,
     padding: 0,
