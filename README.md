@@ -1,7 +1,7 @@
 ## The Random Gallery
-
 As someone who loves diving into random facts and quirky history, this site was super fun to design and code. I built it with React and designed it in Figma.
 
-### 👉 ([https://www.the-random-gallery.com/])
+#### Explore [live](https://the-random-gallery.vercel.app/)
 
-<img width="3182" height="1842" alt="Screenshot 2025-09-30 at 12 55 51 PM" src="https://github.com/user-attachments/assets/53397c70-2b54-4ed6-b8e9-677d7b8cea96" />
+https://github.com/user-attachments/assets/dd7143f5-e3b0-4cb8-9926-59256d0d6781
+
