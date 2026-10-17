@@ -1,4 +1,37 @@
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState } from "react";
+
+const MIN_THUMB_WIDTH = 130; // px; a column is added once each cell can be at least this wide
+const COLUMN_GAP = 32; // px; keep in sync with .gallery column-gap
+const MAX_COLUMNS = 7;
+
+// Tracks an element's content-box size. Returns a callback ref and the size.
+function useElementSize() {
+  const [element, setElement] = useState(null);
+  const [size, setSize] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    if (!element) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      setSize((prev) =>
+        prev.width === width && prev.height === height
+          ? prev
+          : { width, height }
+      );
+    });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [element]);
+
+  return [setElement, size];
+}
+
+function matches(value, selected) {
+  if (selected.length === 0) return true;
+  return Array.isArray(value)
+    ? value.some((v) => selected.includes(v))
+    : selected.includes(value);
+}
 
 export default function Gallery({
   setSelectedItem,
@@ -6,53 +39,10 @@ export default function Gallery({
   currentPage,
   setCurrentPage,
   setTotalPages,
-  sidebarCollapsed,
 }) {
   const [items, setItems] = useState([]);
-  const galleryRef = useRef(null);
-  const rowRef = useRef(null);
-
-  function getColumnCount(width, collapsed) {
-    if (collapsed) {
-      if (width < 500) return 2;
-      if (width < 700) return 3;
-      if (width < 900) return 4;
-      if (width < 1100) return 5;
-      if (width < 1300) return 6;
-      return 7;
-    } else {
-      if (width < 500) return 1;
-      if (width < 700) return 2;
-      if (width < 900) return 3;
-      if (width < 1100) return 4;
-      if (width < 1300) return 5;
-      if (width < 1700) return 6;
-      return 7;
-    }
-  }
-
-  const [columnsPerRow, setColumnsPerRow] = useState(
-    getColumnCount(window.innerWidth, sidebarCollapsed)
-  );
-  const [rowsPerPage, setRowsPerPage] = useState(4);
-
-  const calculateRowsPerPage = useCallback(() => {
-    if (!galleryRef.current || !rowRef.current) {
-      return 4; // default fallback
-    }
-
-    const galleryHeight = galleryRef.current.clientHeight;
-    const rowHeight = rowRef.current.offsetHeight;
-
-    if (rowHeight <= 0) {
-      return 4; // fallback if row height not measured yet
-    }
-
-    const availableHeight = galleryHeight - 36;
-    const calculatedRows = Math.floor(availableHeight / rowHeight);
-
-    return Math.max(1, Math.min(calculatedRows, 10));
-  }, []);
+  const [galleryRef, gallerySize] = useElementSize();
+  const [thumbRef, thumbSize] = useElementSize();
 
   useEffect(() => {
     fetch("/data/gallery.json")
@@ -60,116 +50,37 @@ export default function Gallery({
       .then((data) => setItems(data));
   }, []);
 
-  const applyFilters = (items) => {
-    return items.filter((item) => {
-      const categoryMatch =
-        filters.category.length === 0 ||
-        (Array.isArray(item.category)
-          ? item.category.some((cat) => filters.category.includes(cat))
-          : filters.category.includes(item.category));
+  const filteredItems = items.filter(
+    (item) =>
+      matches(item.category, filters.category) &&
+      matches(item.culture, filters.culture) &&
+      matches(item.color, filters.color)
+  );
 
-      const cultureMatch =
-        filters.culture.length === 0 ||
-        (Array.isArray(item.culture)
-          ? item.culture.some((cul) => filters.culture.includes(cul))
-          : filters.culture.includes(item.culture));
-
-      const colorMatch =
-        filters.color.length === 0 ||
-        (Array.isArray(item.color)
-          ? item.color.some((col) => filters.color.includes(col))
-          : filters.color.includes(item.color));
-
-      return categoryMatch && cultureMatch && colorMatch;
-    });
-  };
-
-  const filteredItems = applyFilters(items);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const newColumnCount = getColumnCount(
-        window.innerWidth,
-        sidebarCollapsed
-      );
-      setColumnsPerRow(newColumnCount);
-
-      setTimeout(() => {
-        const newRowsPerPage = calculateRowsPerPage();
-        setRowsPerPage(newRowsPerPage);
-
-        const newItemsPerPage = newColumnCount * newRowsPerPage;
-        const newTotalPages = Math.ceil(filteredItems.length / newItemsPerPage);
-
-        if (currentPage >= newTotalPages && newTotalPages > 0) {
-          setCurrentPage(Math.max(0, newTotalPages - 1));
-        }
-      }, 50);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [
-    sidebarCollapsed,
-    calculateRowsPerPage,
-    currentPage,
-    setCurrentPage,
-    filteredItems.length,
-  ]);
+  // Every cell has the same width (CSS grid), so a thumbnail's height depends
+  // only on the column count, never on which page is showing.
+  const columns = Math.min(
+    MAX_COLUMNS,
+    Math.max(
+      1,
+      Math.floor(
+        (gallerySize.width + COLUMN_GAP) / (MIN_THUMB_WIDTH + COLUMN_GAP)
+      )
+    )
+  );
+  const rows = thumbSize.height
+    ? Math.max(1, Math.floor(gallerySize.height / thumbSize.height))
+    : 1;
+  const pageSize = columns * rows;
+  const totalPages = Math.ceil(filteredItems.length / pageSize);
+  const page = Math.min(currentPage, Math.max(0, totalPages - 1));
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const newRowsPerPage = calculateRowsPerPage();
-      setRowsPerPage(newRowsPerPage);
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [columnsPerRow, calculateRowsPerPage]);
+    setTotalPages(totalPages);
+    if (page !== currentPage) setCurrentPage(page);
+  }, [totalPages, page, currentPage, setTotalPages, setCurrentPage]);
 
-  const itemsPerPage = columnsPerRow * rowsPerPage;
-
-  useEffect(() => {
-    const newTotalPages = Math.ceil(filteredItems.length / itemsPerPage);
-    setTotalPages(newTotalPages);
-
-    if (currentPage >= newTotalPages && newTotalPages > 0) {
-      setCurrentPage(Math.max(0, newTotalPages - 1));
-    }
-  }, [
-    filteredItems.length,
-    itemsPerPage,
-    setTotalPages,
-    currentPage,
-    setCurrentPage,
-  ]);
-
-  const getChunkedRows = () => {
-    const start = currentPage * itemsPerPage;
-    const pageItems = filteredItems.slice(start, start + itemsPerPage);
-    const rows = [];
-
-    for (let i = 0; i < pageItems.length; i += columnsPerRow) {
-      rows.push(pageItems.slice(i, i + columnsPerRow));
-    }
-
-    return rows;
-  };
-
-  const chunkedRows = getChunkedRows();
-  const currentRowCount = chunkedRows.length;
-  const isSparsePage = currentRowCount < 3 || columnsPerRow < 3;
-
-  useEffect(() => {
-    if (chunkedRows.length > 0 && rowRef.current && galleryRef.current) {
-      const timer = setTimeout(() => {
-        const newRowsPerPage = calculateRowsPerPage();
-        if (newRowsPerPage !== rowsPerPage) {
-          setRowsPerPage(newRowsPerPage);
-        }
-      }, 200);
-      return () => clearTimeout(timer);
-    }
-  }, [chunkedRows.length, calculateRowsPerPage, rowsPerPage]);
+  const pageItems = filteredItems.slice(page * pageSize, (page + 1) * pageSize);
 
   return (
     <div className="vertical">
@@ -177,40 +88,21 @@ export default function Gallery({
         ref={galleryRef}
         className="gallery"
         style={{
-          justifyContent: isSparsePage ? "flex-start" : "space-between",
+          gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+          gridTemplateRows: `repeat(${rows}, 1fr)`,
         }}
       >
-        {chunkedRows.map((row, rowIndex) => (
+        {pageItems.map((item, i) => (
           <div
-            ref={rowIndex === 0 ? rowRef : null}
-            className="gallery-row"
-            style={{
-              justifyContent: isSparsePage ? "flex-start" : "space-between",
-            }}
-            key={rowIndex}
+            key={item.id}
+            ref={i === 0 ? thumbRef : undefined}
+            className="thumbnail"
+            onClick={() => setSelectedItem(item)}
           >
-            {row.map((item) => (
-              <div
-                key={item.id}
-                className="thumbnail"
-                style={{
-                  flex: `1 1 calc((100% - ${
-                    columnsPerRow - 1
-                  } * 2rem) / ${columnsPerRow})`,
-                  maxWidth: "175px",
-                }}
-                onClick={() => setSelectedItem(item)}
-              >
-                <p className="id-number">[{item.id}]</p>
-                <div className="item-container">
-                  <img
-                    style={{ maxHeight: "140px" }}
-                    src={item.image}
-                    alt={item.title}
-                  />
-                </div>
-              </div>
-            ))}
+            <p className="id-number">[{item.id}]</p>
+            <div className="item-container">
+              <img src={item.image} alt={item.title} />
+            </div>
           </div>
         ))}
       </div>

@@ -43,6 +43,11 @@ function App() {
     color: [],
   });
 
+  const updateFilters = (update) => {
+    setFilters(update);
+    setCurrentPage(0);
+  };
+
   const options = {
     category: [
       { value: "artifact", label: "Artifact" },
@@ -94,7 +99,7 @@ function App() {
       <div className="app">
         <TopNav
           setSelectedItem={setSelectedItem}
-          setFilters={setFilters}
+          setFilters={updateFilters}
           options={options}
         />
         <div className={`main ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
@@ -109,7 +114,6 @@ function App() {
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
             setTotalPages={setTotalPages}
-            sidebarCollapsed={sidebarCollapsed}
           />
         </div>
         <Footer

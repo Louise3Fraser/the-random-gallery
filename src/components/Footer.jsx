@@ -15,17 +15,19 @@ export default function Footer({ currentPage, totalPages, onPageChange }) {
           Portfolio
         </a>
       </span>
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i}
-            className={`page-button ${i === currentPage ? "active" : ""}`}
-            onClick={() => onPageChange(i)}
-          >
-            {i + 1}
-          </button>
-        ))}
-      </div>
+      {totalPages > 1 && (
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i}
+              className={`page-button ${i === currentPage ? "active" : ""}`}
+              onClick={() => onPageChange(i)}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      )}
     </footer>
   );
 }
